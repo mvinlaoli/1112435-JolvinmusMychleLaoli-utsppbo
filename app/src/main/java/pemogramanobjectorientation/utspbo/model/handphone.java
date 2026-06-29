@@ -1,13 +1,15 @@
 package pemogramanobjectorientation.utspbo.model;
+import java.util.Scanner;
+
 import pemogramanobjectorientation.utspbo.controller.elektronik;
 import pemogramanobjectorientation.utspbo.enums.jeniselektronik;
 
-public class handphone extends elektronik implements Powerable ,Updatable{
+public class handphone extends elektronik implements Powerable ,Updatable,Callable{
     private String brand;
     private String model;
     private String os;
-    private int ramSize;
-    private int strogeSize;
+    private int ramSize = 4;
+    private int strogeSize = 250;
     public handphone(String brand, String model, String os, int ramSize, int strogeSize){
         super(jeniselektronik.HANDPHONE);
         this.brand = brand;
@@ -17,9 +19,11 @@ public class handphone extends elektronik implements Powerable ,Updatable{
         this.strogeSize = strogeSize;
     }
 
-     public void makeCall(){
-        System.out.println("YES");
-     }
+    public void makeCall(){
+       System.out.println("YES");
+    };
+    
+
     @Override
     public String getPrintDetail() {
         String detail = "Tipe elektornik : " + getPrintDetail() + brand + model + os + ramSize + strogeSize; 
@@ -40,6 +44,8 @@ public class handphone extends elektronik implements Powerable ,Updatable{
         System.out.println("UPDATE");
        
     }
+
+   
     
     
 }

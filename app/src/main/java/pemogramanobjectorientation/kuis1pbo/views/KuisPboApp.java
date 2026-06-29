@@ -51,7 +51,6 @@ public class KuisPboApp {
                     System.out.println(k.getPrintDetail());
                 }
             }
-            
            
             
         
